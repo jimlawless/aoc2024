@@ -24,22 +24,22 @@ func main() {
 	}()
 	scanner := bufio.NewScanner(file)
 	reGrammar, _ = regexp.Compile(patGrammar)
-    have:=make(map[int]int)
+	have := make(map[int]int)
 
 	sum := 0
-    var left[]int
-    
+	var left []int
+
 	for scanner.Scan() {
 		line := scanner.Text()
 		tokens := reGrammar.FindAllString(line, -1)
-        tmp,_:=strconv.Atoi(tokens[0])
-        left=append(left,tmp)
-        tmp,_=strconv.Atoi(tokens[1])
-        have[tmp]=have[tmp]+1
+		tmp, _ := strconv.Atoi(tokens[0])
+		left = append(left, tmp)
+		tmp, _ = strconv.Atoi(tokens[1])
+		have[tmp] = have[tmp] + 1
 	}
-    for i:=0;i<len(left);i++ {
-        sum+=left[i]*have[left[i]]
-    }
+	for i := 0; i < len(left); i++ {
+		sum += left[i] * have[left[i]]
+	}
 	fmt.Println(sum)
 }
 

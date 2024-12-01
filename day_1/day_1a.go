@@ -8,7 +8,7 @@ import (
 	"log"
 	"os"
 	"regexp"
-    "slices"
+	"slices"
 	"strconv"
 )
 
@@ -27,25 +27,25 @@ func main() {
 	reGrammar, _ = regexp.Compile(patGrammar)
 
 	sum := 0
-    var left[]int
-    var right[]int
+	var left []int
+	var right []int
 	for scanner.Scan() {
 		line := scanner.Text()
 		tokens := reGrammar.FindAllString(line, -1)
-        tmp,_:=strconv.Atoi(tokens[0])
-        left=append(left,tmp)
-        tmp,_=strconv.Atoi(tokens[1])
-        right=append(right,tmp)
+		tmp, _ := strconv.Atoi(tokens[0])
+		left = append(left, tmp)
+		tmp, _ = strconv.Atoi(tokens[1])
+		right = append(right, tmp)
 	}
-    slices.Sort(left)
-    slices.Sort(right)
-    for i:=0;i<len(left);i++ {
-        if left[i]>right[i] {
-            sum+=left[i]-right[i]
-        } else {
-            sum+=right[i]-left[i]
-        }
-    }
+	slices.Sort(left)
+	slices.Sort(right)
+	for i := 0; i < len(left); i++ {
+		if left[i] > right[i] {
+			sum += left[i] - right[i]
+		} else {
+			sum += right[i] - left[i]
+		}
+	}
 	fmt.Println(sum)
 }
 
