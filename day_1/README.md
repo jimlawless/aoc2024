@@ -4,4 +4,4 @@ In a recent episode of my podcast ( Stray Pointers ) two friends and I discuss t
 
 https://straypointers.com/e/s2e16.htm
 
-We'll be meeting up again soon to discuss how we're faring in this year's competition.
+We'll be meeting up again soon for a new episode to discuss how we're faring in this year's competition.
