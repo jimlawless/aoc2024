@@ -8,6 +8,7 @@ If the current number and the next number appeared in the opposite orer in the r
 
 In the "b" challenge, I swapped out the offensive entries as soon as I found them and rescanned the line fresh each time.
 
+---
 
 In a recent episode of my podcast ( Stray Pointers ) two friends and I discuss the AoC competition from prior years and our intended approaches to this year's competition.  You might want to give it a listen.
 
