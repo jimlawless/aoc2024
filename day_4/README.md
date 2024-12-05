@@ -8,6 +8,8 @@ Instead of making a record structure, I multiplied the incremented x position by
 
 During the day, I thought about shortening the code that scans the perimeter around the given character.  I thought I could shorten those sections using an array of arrays of integers.  Please refer to new_4a.go and new_4b.go to see those approaches.
 
+---
+
 In a recent episode of my podcast ( Stray Pointers ) two friends and I discuss the AoC competition from prior years and our intended approaches to this year's competition.  You might want to give it a listen.
 
 https://straypointers.com/e/s2e16.htm
