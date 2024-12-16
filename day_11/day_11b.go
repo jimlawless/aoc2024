@@ -39,8 +39,6 @@ func main() {
 
 func countStones(face int, depth int, max int) int {
 	stones := 0
-
-	//fmt.Println(face," ",depth)
 	if depth == max {
 		return 1
 	}
