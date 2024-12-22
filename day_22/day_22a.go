@@ -11,12 +11,10 @@ import (
 	"strconv"
 )
 
-
-
 func main() {
-    var patGrammar = "[\\d]+"
-    var reGrammar *regexp.Regexp	
-    file, err := os.Open(os.Args[1])
+	var patGrammar = "[\\d]+"
+	var reGrammar *regexp.Regexp
+	file, err := os.Open(os.Args[1])
 	handleError(err)
 	defer func() {
 		if err = file.Close(); err != nil {
@@ -25,28 +23,27 @@ func main() {
 	}()
 	scanner := bufio.NewScanner(file)
 	reGrammar, _ = regexp.Compile(patGrammar)
-    sum:=0
+	sum := 0
 	for scanner.Scan() {
 		line := scanner.Text()
 		tokens := reGrammar.FindAllString(line, -1)
 		if len(tokens) == 0 {
 			continue
 		}
-        secret,_:=strconv.Atoi(tokens[0])
-        for i:=0; i<2000; i++ {
-            secret^=(secret*64)
-            secret%=16777216
-            secret^=(secret/32)
-            secret%=16777216
-            secret^=secret*2048
-            secret%=16777216                              
-        }
-        sum+=secret
-        fmt.Println(tokens[0],": " ,secret)                      
-    }
+		secret, _ := strconv.Atoi(tokens[0])
+		for i := 0; i < 2000; i++ {
+			secret ^= (secret * 64)
+			secret %= 16777216
+			secret ^= (secret / 32)
+			secret %= 16777216
+			secret ^= secret * 2048
+			secret %= 16777216
+		}
+		sum += secret
+		fmt.Println(tokens[0], ": ", secret)
+	}
 	fmt.Println(sum)
 }
-
 
 func handleError(e error) {
 	if e != nil {
