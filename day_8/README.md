@@ -1,6 +1,6 @@
 # Day 8 Solutions in Go / Golang
 
-Well, I've started day 8 but I'm not quite there yet and I don't think I'm going to continue in the competition at this point.  If I hear about particularly interesting challenges, I might try those out-of-order.
+Well, I've started day 8 but I'm not quite there yet and I don't think I'm going to continue regularly in the competition at this point.  I've tried a few of the later challenges, though.
 
 ---
 
