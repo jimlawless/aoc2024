@@ -8,4 +8,9 @@ In a recent episode of my podcast ( Stray Pointers ) two friends and I discuss t
 
 https://straypointers.com/e/s2e16.htm
 
-We'll be meeting up again soon for a new episode to discuss how we're faring in this year's competition.
+# New - 27 December 2024
+
+We just published our AoC2024 wrap-up video podcast:
+
+https://straypointers.com/e/s2e20.htm
+
