@@ -14,8 +14,8 @@ void doit(string fname) {
         left ~= to!int(words[0]);
         right ~= to!int(words[1]);
     }
-    auto l = left.sort();
-    auto r = right.sort();
+    left.sort();
+    right.sort();
     int sum;
     for(int i=0; i<left.length;i++) {
         if(left[i]>right[i]) {
