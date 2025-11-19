@@ -5,7 +5,7 @@ import std.array;
 import std.algorithm;
 import std.datetime.stopwatch;
 
-void part_1(string fname) {
+void doit(string fname) {
     auto file = File(fname,"r");
     auto left = new int[0];
     auto right = new int[0];
@@ -29,6 +29,7 @@ void part_1(string fname) {
     file.close();
 }
 
+
 void main(string[] args) {
     if(args.length < 2) {
         writeln("Syntax:\n\t",args[0]," filename\n");
@@ -37,7 +38,7 @@ void main(string[] args) {
     auto sw = StopWatch(AutoStart.no);
     sw.start();
     try {
-        part_1(args[1]);
+        doit(args[1]);
     }
     catch(FileException e) {
         writeln("Exception: ", e.msg);
