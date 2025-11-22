@@ -1,9 +1,6 @@
 import std.stdio;
-import std.conv;
 import std.file;
 import std.array;
-import std.regex;
-import std.conv;
 import std.datetime.stopwatch;
 
 void doit(string fname) {
